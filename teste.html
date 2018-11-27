@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<script>
+		(function() {
+			//console.log(fatorialRecursivo(5);
+			//sumTwoSmallestNumbers([23, 71, 33, 82, 1]);
+			//console.log(findOdd3([7, 25, 33, 82, 113, 52, 23, 04, 95]))
+			console.log(raio(5));
+		})();
+		
+		// Criar uma função que leia um numero (2019, 2020, 2018 ou 2017) 
+		// Retorne se é o ano é "Este ano", "Ano passado", "Ano que vem" ou "Ano retrasado"
+		// Não poderá utilizar IF
+		function queAnoEstou(ano){
+			// Enjoy =)
+		}
+		
+		// Criar uma função que me retorne "Bom dia", "Boa tarde" ou "Boa noite" de acordo com as horas
+		// Será considerado somente as horas e desconsiderado os minutos
+		// Poderá utilizar somente dois IFs
+		function retornoHora(hora){
+			// Do your best
+		}
+		
+		// calcular a área de uma circunferencia de diametro 5
+		// mostrar o resultado no console
+		function areaDaCircunferencia(diametro){
+			var pi = 3.14;
+			return pi * diametro;
+		}
+		
+		function raio(diametro){
+			return diametro / 2; 
+		}
+		
+		// Calcular a área de um quadrado
+		function calc(lado, altura){
+			return lado * altura; 
+		}
+		
+		function isPrime(num) {
+			for(var i = 2; i < num; i++)
+				if(num % i === 0) return false;
+			return num !== 1 && num !== 0;
+		}
+
+		//Ao receber um array quero saber quais numeros são impares e não primos
+		function findOdd2(nums){
+			var resultado = [];
+			
+			for(var i = 0; i <= (nums.length -1); i++){
+				if(nums[i] != 7 && nums[i] != 5 && nums[i] != 3){	
+					if(nums[i] == 1){
+						resultado.push(nums[i]);
+					}else if(nums[i] % 1 == 0 || nums[i] % 3 == 0 || nums[i] % 5 == 0 || nums[i] % 7 == 0 || nums[i] % 9 == 0){
+						resultado.push(nums[i]);
+					}				
+				}
+			}
+			
+			return resultado;
+		}
+		
+		function findOdd3(nums) {
+			var resultado = [];
+			for(var i = 1; i < (nums.length); i++){
+				if(nums[i] % 2 != 0 && (nums[i] != 3 || nums[i] != 5 || nums[i] != 7)){
+					resultado.push(nums[i]);
+				}
+			}
+			return resultado;
+		}
+		
+		function findOdd(nums) {
+			var resultado = [];
+			for(var i = 0; i <= (nums.length -1); i++){
+				if(nums[i] % 2 != 0){
+					resultado.push(nums[i]);
+				}
+			}
+			return resultado;
+		}
+		
+		function sumTwoSmallestNumbers(numbers){
+			var numbersAux = numbers
+			
+			var menorNumero = numbersAux[0]
+			for(var i = 0; i <= (numbersAux.length - 1); i++){
+				if(numbersAux[i] <= menorNumero){
+					menorNumero = numbersAux[i];
+					numbersAux.splice(i, 1);
+				}
+			}
+			
+			var segundoMenorNumero = numbersAux[0]
+			for(var i = 0; i <= (numbersAux.length - 1); i++){
+				if(numbersAux[i] <= segundoMenorNumero){
+					segundoMenorNumero = numbersAux[i];
+				}
+			}
+			
+			return (menorNumero + segundoMenorNumero);
+		}
+		
+		function fatorialRecursivo(numero){
+			console.log(numero + '!');
+			if(numero == 1 || numero == 0){
+				console.log('finalizando');
+				return 1;
+			}else{
+				return numero * fatorialRecursivo(numero - 1);
+			}
+		}
+		
+		function fatorialNaoRecursivo(numero){
+			var fat = 1;
+			
+			for(var i = numero; i >= 1; i--){
+				console.log(i + '!');
+				fat = fat * i;
+			}
+			
+			console.log('finalizando');
+			return fat;
+		}
+		
+		function divisors(num) {
+			var array = [];
+			
+			for(var i = 2; i < (num - 1); i++){
+				if(num % i == 0){
+					array.push(i);
+				}
+			}
+			
+			if(array.length > 0){
+			  return array;
+			}else{
+			  return num + " is prime";
+			}
+			
+		};
+	</script>
+	
+</body>
+</html>
