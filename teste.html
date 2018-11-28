@@ -9,21 +9,52 @@
 			//console.log(fatorialRecursivo(5);
 			//sumTwoSmallestNumbers([23, 71, 33, 82, 1]);
 			//console.log(findOdd3([7, 25, 33, 82, 113, 52, 23, 04, 95]))
-			console.log(raio(5));
+			//console.log(raio(5));
+			//console.log(retornoHora(new Date().toTimeString()));
+			//console.log(retornoHora('10:00'));
+			console.log(queAnoEstou(2017));
 		})();
 		
 		// Criar uma função que leia um numero (2019, 2020, 2018 ou 2017) 
 		// Retorne se é o ano é "Este ano", "Ano passado", "Ano que vem" ou "Ano retrasado"
 		// Não poderá utilizar IF
 		function queAnoEstou(ano){
-			// Enjoy =)
+			switch(ano){
+				case 2016:
+					return "Ano retrasado";
+					break;
+				case 2017:
+					return "Ano passado";
+					break;
+				case 2018: 
+					return "Este ano";
+					break;
+				case 2019:  
+					return "Ano que vem";
+					break;
+				default:
+					return "Ano inválido";
+					break;
+			}
+			
 		}
 		
 		// Criar uma função que me retorne "Bom dia", "Boa tarde" ou "Boa noite" de acordo com as horas
 		// Será considerado somente as horas e desconsiderado os minutos
 		// Poderá utilizar somente dois IFs
 		function retornoHora(hora){
-			// Do your best
+			console.log(hora);
+			var teste = hora.substr(0,2);
+
+			if ((teste => 00) && (teste <= 12)){
+				return "Bom dia";
+			}else if ((teste > 12) && (teste <= 18)){
+				return "Boa tarde";
+			}else {
+				return "Boa noite"
+			};
+			
+
 		}
 		
 		// calcular a área de uma circunferencia de diametro 5
