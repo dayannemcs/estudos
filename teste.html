@@ -10,10 +10,56 @@
 			//sumTwoSmallestNumbers([23, 71, 33, 82, 1]);
 			//console.log(findOdd3([7, 25, 33, 82, 113, 52, 23, 04, 95]))
 			//console.log(raio(5));
-			//console.log(retornoHora(new Date().toTimeString()));
+			//console.log(retornoHora('21:00'));
 			//console.log(retornoHora('10:00'));
-			console.log(queAnoEstou(2017));
+			//console.log(queAnoEstou(2017));
+			ordenacao();
 		})();
+		
+		// Passo 1: Obter a altura e o peso da pessoa
+		// Passo 2: Calcular o IMC
+		// Passo 3: Dizer qual o nivel de obesidade da pessoa
+		
+		// Passo 1: Obter os valores de n1,n2,n3; 
+		// Passo 2: Somar os valores do passo 1; 
+		// Passo 3: Dividir o resultado obtido no Passo 2 por 3;
+		// Passo 4: Se o resultado do Passo 3 for maior ou igual a 6 então escreva
+		// “Parabéns você foi aprovado”, senão, escreva “Infelizmente você ficou de exame”
+		// e vá para o fim do programa
+		function calcularMedia(n1, n2, n3){
+		}
+		
+		function ordenacao(){
+			var list = [7, 25, 33, 82, 113, 52, 23, 04, 95];
+			console.log(list.sort(function(a, b){return a-b}));
+		}
+		
+		function estudoWhile2(){
+			var list = [7, 25, 33, 82, 113, 52, 23, 04, 95];
+			var count = 0;
+			
+			while(count != list.length){
+				console.log('contador: ' + count);
+				console.log('item da lista: ' + list[count]);				
+				count ++;
+			}
+		}
+		
+		function estudoWhile(){			
+			var isEnable = true;
+			var count = 0;
+			
+			while(isEnable){
+				console.log(count);
+				
+				if(count == 5){
+					isEnable = false;
+				}
+				
+				count ++;
+			}
+			
+		}
 		
 		// Criar uma função que leia um numero (2019, 2020, 2018 ou 2017) 
 		// Retorne se é o ano é "Este ano", "Ano passado", "Ano que vem" ou "Ano retrasado"
@@ -46,9 +92,9 @@
 			console.log(hora);
 			var teste = hora.substr(0,2);
 
-			if ((teste => 00) && (teste <= 12)){
+			if ((teste => 00) && (teste < 12)){
 				return "Bom dia";
-			}else if ((teste > 12) && (teste <= 18)){
+			}else if ((teste >= 12) && (teste <= 18)){
 				return "Boa tarde";
 			}else {
 				return "Boa noite"
