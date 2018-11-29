@@ -4,25 +4,21 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<form method="POST">
-		<input type="text">
-		<button type="submit">enviar</button>
-	</form>
-
 	<script>
 		(function() {			
-			console.log(desafio1());
+			console.log('Resultado: ', desafio1(100));
 		})();
 		
 		function desafio1(num){
-			var sum;
+			var sum = 0;
 			for(var i = 0; i < num; i++){
-				if(num % 3 == 0 && num % 5 == 0){
-					
-			}
-
-			}
+				if(i % 3 == 0 && i % 5 == 0){
+					console.log(i);
+					sum = sum + i
+				}
+			}	
 			
+			return sum;
 		}
 
 	</script>
