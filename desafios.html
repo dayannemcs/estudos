@@ -6,7 +6,11 @@
 <body>
 	<script>
 		(function() {			
-			console.log('Resultado1: ', desafio(1000));
+			//console.log('Resultado1: ', desafio(1000));
+			//console.log(fib(9));
+			console.log(TimeConvert(126));
+			
+			
 		})();
 		
 		function desafio(num){
@@ -20,6 +24,31 @@
 			}	
 			
 			return sum;
+		}
+		
+		function fib(num){		
+
+			if (num < 0){
+				return "Entrada inválida";
+			}
+			if(num == 0){
+				return 0;
+			}else if(num == 1){
+				return 1;
+			}else{
+				return fib(num - 1) + fib(num -2);
+			}		
+			
+
+		}
+
+		function TimeConvert(num) { 
+
+			var hours = Math.floor(num / 60);
+			var minutes = num % 60;
+			var str = hours + ":" + minutes;  
+			return str; 
+			
 		}
 
 
