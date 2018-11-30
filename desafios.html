@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<script>
+		(function() {			
+			console.log('Resultado1: ', desafio1(100));
+			console.log('Resultado2: ', desafio2(100));
+		})();
+		
+		function desafio1(num){
+			var sum = 0;
+			for(var i = 0; i < num; i++){
+				
+				if(i % 3 == 0 && i % 5 == 0){
+					//console.log(i);
+					sum = sum + i
+				}
+			}	
+			
+			return sum;
+		}
+
+		function desafio2(num){
+			var sum = 0;
+			var i = 0;
+
+			while(i < num){
+
+				if(i % 3 == 0 && i % 5 == 0){
+					//console.log(i);
+					sum = sum + i
+				}
+
+				i++;
+			}				
+			
+			return sum;
+		}
+
+	</script>
+	
+</body>
+</html>
