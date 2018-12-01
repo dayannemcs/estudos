@@ -10,19 +10,24 @@
 			//console.log(fib(9));
 			//console.log(firstReverse(["Banana", "Orange", "Apple", "Mango"]));
 			//console.log(SimpleAdding(140));
-			console.log(LongestWord("Maior palavra"));
+			testeArray([25,40,8,100,41,2,4]);
 			
 			
 		})();
 
-		function LongestWord(sen) { 
-			
-			var long = '';
-			
+		function testeArray(arr) { 
+			var arrPar = [] ;
+			console.log("Array dado:" ,arr);	
 
-
-			return teste; 
+			for(var i = 0; i < arr.length; i++){	
+				if(arr[i] % 2 == 0){
+					arrPar.push(arr[i] * 2);
+									
+				}
+			}	
 			
+			return console.log("Novo array: ",arrPar);		
+							
 		}
 
 		function SimpleAdding(num) { 
