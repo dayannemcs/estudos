@@ -10,10 +10,75 @@
 			//console.log(fib(9));
 			//console.log(firstReverse(["Banana", "Orange", "Apple", "Mango"]));
 			//console.log(SimpleAdding(140));
-			testeArray([25,40,8,100,41,2,4]);
+			//testeArray([25,40,8,100,41,2,4]);
+			//console.log(sumArray([25,25,100]));
+			//console.log(compareTriplets([17 ,28, 30],[99 ,16 ,8]));
+			//console.log(aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]));
+			console.log(diagonalDifference(
+				[1,2,3],
+				[4,5,6],
+				[7,9,9]));
 			
 			
 		})();
+
+		function diagonalDifference(arr) {
+			
+			var diag1 = 0;
+			var diag2 = 0;
+
+			for(var i = 0; i < arr.length; i++){
+				for (var j = 0; j < arr.length; j++){
+
+				}
+			}
+			
+			return arr;
+
+		}
+
+
+		//Calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.
+		function aVeryBigSum(arr){
+			var result = 0;
+
+			for(var i = 0; i < arr.length; i++){
+				result = result + arr[i];
+			}
+
+			return result;
+
+		}
+
+		function compareTriplets(a, b){
+			var pontosA = 0;
+			var pontosB = 0;
+			var result = [];
+			
+			for(var i = 0; i < a.length && b.length; i++){				
+				if (a[i] > b[i]){
+					pontosA++;
+					
+					
+				}else if(a[i] < b[i]){
+					pontosB++;
+				}			
+			}		
+			result.push(pontosA, pontosB);
+			return result;
+			
+
+		}
+
+
+		function sumArray(arr){
+			var result = 0;
+			console.log("Array dado: "+arr);
+			for (var i = 0; i < arr.length; i++){				
+				result = result + arr[i];
+			}
+			return "Soma é: "+result;
+		}
 
 		function testeArray(arr) { 
 			var arrPar = [] ;
