@@ -14,33 +14,40 @@
 			//console.log(sumArray([25,25,100]));
 			//console.log(compareTriplets([17 ,28, 30],[99 ,16 ,8]));
 			//console.log(aVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]));
-			console.log(calculateMatrix([
+			var items = [
 				[2, 3, 4], 
-				[5, 3, -1], 
-				[9, 8, -2]]));
+				[5, 3, 1], 
+				[9, 8, 6]
+			];
+
+			console.log(calculateMatrix(items));
 			
 			
 		})();
 
 		function calculateMatrix(matrix){
+			console.log(matrix);
 			var n = matrix.length;
+			console.log('tamanho: ' + n);
 			var diag1 = 0;
     		var diag2 = 0;
 
-			for(var i = 0; i < n; i++){				
+			for(var i = 0; i < n; i++){
 				for(var j = 0; j < n; j++){
-					if(i === j){
+					if(i == j){
+						console.log('principal: ', matrix[i][j]);
 						diag1 += matrix[i][j];
 					}
-					if(i + j === n - 1){
+
+					if(i + j == n - 1){
+						console.log('secundaria: ',matrix[i][j]);
 						diag2 += matrix[i][j];
-					}					
-				}
+					}
+				}	
 			}
-			return Math.abs(diag1 - diag2);
 
+			return "Soma das diagonais: "+Math.abs(diag1 - diag2);
 		}
-
 
 		//Calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.
 		function aVeryBigSum(arr){
