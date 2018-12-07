@@ -22,16 +22,28 @@
 
 			// console.log(calculateMatrix(items));
 			//plusMinus([-4, 3, -9, 0, 4, 1]);
-			console.log(desafioMeio([20, 5, 9, 8]));			
+			//console.log(desafioMeio([20, 5, 9, 8]));
+			//staircase(6);		
 			
-		})();
+		})();	
+
+
+		function staircase(n) {	
+			var staircase = "",
+			space = " ",
+			hash = "#";
+			for(var i = n ; i > 0 ;i--){
+				staircase += space.repeat(i-1).concat(hash.repeat(n-(i-1))) + "\n";
+			}
+			console.log(staircase);
+
+		}
 
 		// Dado um array, pegar o valor da posição central e somar com o ultimo item do array
 		// Se o array não existir centro somar o primeiro valor com o ultimo valor do array
 		// Exemplos:
 		// [12, 5, 9, 8] = 20
 		// [12, 5, 15, 9, 5] = 20
-
 
 		function desafioMeio(arr){
 			var n = arr.length;
