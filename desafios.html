@@ -23,10 +23,43 @@
 			// console.log(calculateMatrix(items));
 			//plusMinus([-4, 3, -9, 0, 4, 1]);
 			//console.log(desafioMeio([20, 5, 9, 8]));
-			//staircase(6);		
+			//staircase(6);	
+			//miniMaxSum([1,2,3,4,5]);	
+			birthdayCakeCandles([3, 3, 3, 3]);
 			
 		})();	
 
+		function birthdayCakeCandles(ar) {
+			var result = 0;
+			var tallest = Math.max.apply(null, ar);
+
+			for (var i = 0; i < ar.length; i++){
+				if(ar[i] == tallest){
+					result++;
+				}
+			}
+
+			return console.log(result);
+		}
+
+
+		function miniMaxSum (arr){
+
+			var soma = 0;
+			var min = Math.min.apply(null,arr);
+			var max = Math.max.apply(null,arr);			
+
+			for(var i = 0; i < arr.length; i++){
+				soma = soma + arr[i];
+			}
+
+			var somaMin = soma - max;
+			var somaMax = soma - min;
+
+			console.log(somaMin,somaMax);
+			
+
+		}
 
 		function staircase(n) {	
 			var staircase = "",
