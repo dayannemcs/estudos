@@ -25,9 +25,55 @@
 			//console.log(desafioMeio([20, 5, 9, 8]));
 			//staircase(6);	
 			//miniMaxSum([1,2,3,4,5]);	
-			birthdayCakeCandles([3, 3, 3, 3]);
+			//birthdayCakeCandles([3, 3, 3, 3]);
+			//console.log(timeConversion('11:00:00PM'));
+			console.log(gradingStudents([73,67,38,33]));
 			
 		})();	
+
+		function  gradingStudents(grades){
+
+			var notaArred = [];
+			var notasFinais = [];			
+			var calculo = 0;
+
+			for(var i = 0; i < grades.length; i++) {
+				
+				if(grades[i] < 38) {
+					notasFinais.push(grades[i]);
+					
+				}else{
+					notaArred = Math.ceil(grades[i]/5.0) * 5;					
+					calculo = notaArred - grades[i];					
+					if(calculo < 3) {
+						notasFinais.push(notaArred);
+					}else {
+						notasFinais.push(grades[i]);
+					}					
+				}				
+				
+			}
+			return notasFinais;
+			
+		}
+
+		function timeConversion (hora) {
+			var zone = hora.substring(hora.length - 2, hora.length);
+			var hours = hora.substring(0, 2);
+			var minutes = hora.substring(3, 5);
+			var seconds = hora.substring(6, 8);
+
+			if(zone == "PM" && hours != '12'){
+				hours = parseInt(hours);
+				hours += 12;
+			}
+
+			if(zone =='AM' && hours == '12'){
+				hours = '00';
+			}
+			
+			return hours + ":" + minutes + ":" + seconds;
+		}
 
 		function birthdayCakeCandles(ar) {
 			var result = 0;
